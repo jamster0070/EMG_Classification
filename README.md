@@ -34,12 +34,6 @@ Per channel (`raw1`, `raw2`, `raw3`), the pipeline extracts:
   - Classification report (precision/recall/F1)
   - Confusion matrix
 
-
-## Setup
-```bash
-pip install numpy pandas scikit-learn matplotlib seaborn scipy
-````
-
 ## Run
 
 ```bash
@@ -48,17 +42,6 @@ python SVM.py
 python LG.py
 # Random Forest: open RF.ipynb and run the cells
 ```
-
-
-## Data (Not Included)
-
-This repo does **not** include EMG CSV files.
-If you want to run the code, place your CSV files under something like:
-
-```
-./data/EMG_data/
-```
-
 
 ## Example: Raw EMG Signals
 
