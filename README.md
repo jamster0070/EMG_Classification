@@ -1,4 +1,4 @@
-# EMG Hand Gesture Classification (3-Sensor)
+# EMG Hand Gesture Classification
 
 This repository contains a small end-to-end pipeline for **hand gesture classification** using **3-channel EMG (electromyography)** signals.  
 The long-term motivation is to use EMG-based gestures for simple **HCI controls**, and this project focuses on building and comparing **classical ML baselines**.
@@ -30,8 +30,6 @@ The long-term motivation is to use EMG-based gestures for simple **HCI controls*
 └── assets/
 ````
 
----
-
 ## Methodology
 ### 1) Windowing
 Each EMG recording is segmented into fixed-length windows.  
@@ -50,7 +48,6 @@ Per channel (`raw1`, `raw2`, `raw3`), the pipeline extracts:
   - Classification report (precision/recall/F1)
   - Confusion matrix
 
----
 
 ## Setup
 ```bash
@@ -66,7 +63,6 @@ python LG.py
 # Random Forest: open RF.ipynb and run the cells
 ```
 
----
 
 ## Data (Not Included)
 
@@ -77,59 +73,59 @@ If you want to run the code, place your CSV files under something like:
 ./data/EMG_data/
 ```
 
----
 
 ## Example: Raw EMG Signals
 
 <img src="assets/time_domain.png" width="850">
 
----
 
 ## Results (All classes: A–F)
 
 ### KNN
+<p>
+  <img src="assets/KNN_accuracy.png" width="49%"/>
+  <img src="assets/KNN_confusion.png" width="49%"/>
+</p>
 
-<img src="assets/KNN_accuracy.png" width="750">
-<img src="assets/KNN_confusion.png" width="750">
 
 ### Softmax Regression
+<p>
+  <img src="assets/SoftMax_accuracy.png" width="49%"/>
+  <img src="assets/SoftMax_confusion.png" width="49%"/>
+</p>
 
-<img src="assets/SoftMax_accuracy.png" width="750">
-<img src="assets/SoftMax_confusion.png" width="750">
 
 ### SVM (RBF)
+<p>
+  <img src="assets/SVM_accuracy.png" width="49%"/>
+  <img src="assets/SVM_confusion.png" width="49%"/>
+</p>
 
-<img src="assets/SVM_accuracy.png" width="750">
-<img src="assets/SVM_confusion.png" width="750">
 
 ### Random Forest
+<p>
+  <img src="assets/RF_accuracy.png" width="49%"/>
+  <img src="assets/RF_confusion.png" width="49%"/>
+</p>
 
-<img src="assets/RF_accuracy.png" width="750">
-<img src="assets/RF_confusion.png" width="750">
-
----
 
 ## Random Forest: Reduced Class Experiments
 
 To investigate class overlap / ambiguity, I also trained Random Forest models on reduced gesture sets.
 
 ### A, B, C, D, F (E removed)
+<p>
+  <img src="assets/RF_ABCDF_accuracy.png" width="49%"/>
+  <img src="assets/RF_ABCDF_confusion.png" width="49%"/>
+</p>
 
-<img src="assets/RF_ABCDF_accuracy.png" width="750">
-<img src="assets/RF_ABCDF_confusion.png" width="750">
 
 ### A, C, F (3-class subset)
+<p>
+  <img src="assets/RF_ACF_accuracy.png" width="49%"/>
+  <img src="assets/RF_ACF_confusion.png" width="49%"/>
+</p>
 
-<img src="assets/RF_ACF_accuracy.png" width="750">
-<img src="assets/RF_ACF_confusion.png" width="750">
-
----
-
-## Decision Tree Visualization
-
-A single decision tree visualization extracted from the Random Forest: <img src="assets/RF_decision_tree.png" width="950">
-
----
 
 ```
 ```
