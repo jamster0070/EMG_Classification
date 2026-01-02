@@ -5,8 +5,6 @@ The long-term motivation is to use EMG-based gestures for simple **HCI controls*
 
 > **Dataset is NOT included** in this repository.
 
----
-
 ## Summary
 - Collect EMG recordings for multiple gesture classes (A–F) using **3 sensors**.
 - Preprocessing + feature extraction pipeline:
@@ -17,18 +15,6 @@ The long-term motivation is to use EMG-based gestures for simple **HCI controls*
 - Visualized results with **classification reports** and **confusion matrices**.
 - Additional experiment: reduced the gesture set (A–F → A,B,C,D,F → A,C,F) to observe how class overlap affects performance.
 
----
-
-## Repository Structure
-```
-
-.
-├── KNN.py
-├── SVM.py
-├── LG.py                 # multinomial logistic regression (softmax)
-├── RF.ipynb              # random forest experiments
-└── assets/
-````
 
 ## Methodology
 ### 1) Windowing
@@ -95,7 +81,7 @@ If you want to run the code, place your CSV files under something like:
 </p>
 
 
-### SVM (RBF)
+### SVM
 <p>
   <img src="assets/SVM_accuracy.png" width="49%"/>
   <img src="assets/SVM_confusion.png" width="49%"/>
@@ -126,6 +112,3 @@ To investigate class overlap / ambiguity, I also trained Random Forest models on
   <img src="assets/RF_ACF_confusion.png" width="49%"/>
 </p>
 
-
-```
-```
